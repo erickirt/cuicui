@@ -1,8 +1,8 @@
-import { getSnippetsCategories } from "#/src/app/(site)/snippets/get-snippets-categories";
-import { newFindSectionBySlug } from "#/src/utils/section-category-components-utils/section-list-utils";
 import type { CategoryType } from "@/lib/types/component";
 import { differenceInDays } from "date-fns";
 import type { LucideIcon } from "lucide-react";
+import { getSnippetsCategories } from "#/src/app/(site)/snippets/get-snippets-categories";
+import { newFindSectionBySlug } from "#/src/utils/section-category-components-utils/section-list-utils";
 type SidemenuItems = {
   title: string;
   items: {

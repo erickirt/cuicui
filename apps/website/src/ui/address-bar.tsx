@@ -6,11 +6,11 @@ import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import { Fragment, Suspense } from "react";
 
-import { ScrollArea } from "./shadcn/scrollarea";
 import {
   ModernGradientContainerContent,
   ModernGradientContainerRoot,
 } from "@/cuicui/common-ui/buttons/github-stars/simple-container";
+import { ScrollArea } from "./shadcn/scrollarea";
 
 function Params() {
   const searchParams = useSearchParams();
@@ -69,10 +69,10 @@ export function AddressBar() {
                         return (
                           <Fragment key={segment}>
                             <Link
-                              key={segment}
-                              href={`/${array.slice(0, index + 1).join("/")}`}
-                              title={segment}
                               className="text-nowrap px-1 text-neutral-500 transition-opacity hover:opacity-80 dark:text-neutral-300"
+                              href={`/${array.slice(0, index + 1).join("/")}`}
+                              key={segment}
+                              title={segment}
                             >
                               {segment}
                             </Link>

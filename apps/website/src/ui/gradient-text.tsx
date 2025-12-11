@@ -1,5 +1,5 @@
-import type { ReactNode } from "react";
 import { cn } from "@/cuicui/utils/cn";
+import type { ReactNode } from "react";
 
 export const GradientText = ({
   children,

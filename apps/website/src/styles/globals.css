@@ -1,15 +1,13 @@
-@import './shad-cn.css' layer(base);
-@import './components.css' layer(base);
-@import './components.utilities.css';
+@import "tailwindcss";
+@import "./shad-cn.css" layer(base);
+@import "./components.css" layer(base);
+@import "./components.utilities.css";
 
+@config '../../tailwind.config.ts';
 
 @plugin 'tailwindcss-animate';
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
-
-@import 'tailwindcss';
-
-@config '../../tailwind.config.ts';
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,

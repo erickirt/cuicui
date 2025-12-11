@@ -1,14 +1,14 @@
-import Link from "next/link";
 import {
   ModernGradientContainerContent,
   ModernGradientContainerRoot,
 } from "@/cuicui/common-ui/buttons/github-stars/simple-container";
+import Link from "next/link";
 
 export default function Byline() {
   return (
     <ModernGradientContainerRoot
-      className="w-full"
       animationDurationInSeconds={20}
+      className="w-full"
     >
       <ModernGradientContainerContent className="px-4 py-2 flex-col items-start">
         <p className="inline text-neutral-400 text-sm">

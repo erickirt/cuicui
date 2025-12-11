@@ -1,5 +1,5 @@
-import type { HTMLAttributes, ReactNode } from "react";
 import { cn } from "@/cuicui/utils/cn";
+import type { HTMLAttributes, ReactNode } from "react";
 
 export const GradientContainer = ({
   children,

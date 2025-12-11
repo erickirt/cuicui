@@ -4,9 +4,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 
-import { newFindSectionBySlug } from "#/src/utils/section-category-components-utils/section-list-utils";
-import { env } from "#/src/env";
 import NavigationMenu from "#/src/app/(site)/components/sidemenu/navigation-menu";
+import { env } from "#/src/env";
+import { newFindSectionBySlug } from "#/src/utils/section-category-components-utils/section-list-utils";
 
 type Props = {
   children: ReactNode;

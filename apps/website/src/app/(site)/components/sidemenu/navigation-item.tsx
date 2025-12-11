@@ -42,8 +42,8 @@ export function GlobalNavItem({
       )}
       data-testid={`navigation-link-${name}`}
       href={href}
-      title={name}
       target={target === "newWindow" ? "_blank" : undefined}
+      title={name}
       {...props}
     >
       <div className="flex items-center gap-2">

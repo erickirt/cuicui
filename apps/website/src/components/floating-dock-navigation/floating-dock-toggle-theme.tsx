@@ -5,7 +5,7 @@ import { MoonIcon, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
 
 export const FloatingDockToggleTheme = () => {
-  const { setTheme, theme, resolvedTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
 
   const handleSwitchTheme = () => {
     if (resolvedTheme === "dark") {
@@ -17,12 +17,12 @@ export const FloatingDockToggleTheme = () => {
   };
   return (
     <button
-      type="button"
-      onClick={handleSwitchTheme}
       className={cn(
         "group relative h-14 w-10 overflow-hidden transition rounded-full bg-neutral-50 dark:bg-neutral-900 p-2 border border-neutral-500/20",
         "hover:scale-110 transform-gpu transition duration-150",
       )}
+      onClick={handleSwitchTheme}
+      type="button"
     >
       <SunIcon
         className={cn(

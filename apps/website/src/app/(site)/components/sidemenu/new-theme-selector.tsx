@@ -3,7 +3,7 @@
 import { cn } from "@/cuicui/utils/cn";
 import { LaptopMinimalIcon, MoonIcon, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
-import { useState, useRef, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const NewThemeSwitch = ({
   className,
@@ -57,12 +57,12 @@ export const NewThemeSwitch = ({
 
   return (
     <div
-      ref={containerRef}
       className={cn(
         "relative group flex border items-center gap-1 p-0.5 rounded-full border-neutral-400/10",
         className,
       )}
       onMouseLeave={() => setHoveredTheme(activeTheme ?? null)}
+      ref={containerRef}
     >
       <div
         className="absolute bg-neutral-400/20 rounded-full transition-all duration-300 ease-out"
@@ -77,18 +77,18 @@ export const NewThemeSwitch = ({
       {listOfThemes.map((themeInList) => {
         return (
           <button
-            type="button"
-            key={themeInList}
-            data-theme={themeInList}
-            onClick={() => {
-              setTheme(themeInList);
-            }}
-            onMouseEnter={() => setHoveredTheme(themeInList)}
             className={cn(
               "relative text-neutral-500 size-7 inline-grid place-content-center transition-all duration-300 z-10",
               activeTheme === themeInList &&
                 "text-neutral-700 dark:text-neutral-300",
             )}
+            data-theme={themeInList}
+            key={themeInList}
+            onClick={() => {
+              setTheme(themeInList);
+            }}
+            onMouseEnter={() => setHoveredTheme(themeInList)}
+            type="button"
           >
             {themeInList === "system" && (
               <LaptopMinimalIcon className={cn("size-4")} />

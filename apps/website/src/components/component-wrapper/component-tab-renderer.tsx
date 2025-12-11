@@ -2,11 +2,15 @@ import * as Tabs from "@radix-ui/react-tabs";
 
 import "./full-component.css";
 
-import { ComponentWrapper } from "#/src/components/component-wrapper/component-wrapper";
+import { cn } from "@/cuicui/utils/cn";
 import type {
   ComponentType,
   VariantType,
 } from "@cuicui/ui/lib/types/component";
+import { createElement } from "react";
+import { ComponentWrapper } from "#/src/components/component-wrapper/component-wrapper";
+import { getContainerHeightClass } from "#/src/components/component-wrapper/get-container-height-class";
+import StepToInstall from "#/src/components/steps-to-install/step-to-install";
 import CodeHighlighter from "#/src/ui/code-highlighter";
 import {} from "#/src/ui/shadcn/resizable";
 import {
@@ -14,14 +18,10 @@ import {
   ScrollAreaViewport,
   ScrollBar,
 } from "#/src/ui/shadcn/scrollarea";
-import { cn } from "@/cuicui/utils/cn";
-import { getContainerHeightClass } from "#/src/components/component-wrapper/get-container-height-class";
-import { createElement } from "react";
 import {
   getCuicuiDependenciesInfo,
   readFileContent,
 } from "#/src/utils/get-code-from-path";
-import StepToInstall from "#/src/components/steps-to-install/step-to-install";
 
 export default async function ComponentTabRenderer({
   component,
@@ -103,10 +103,10 @@ export default async function ComponentTabRenderer({
       {tabs.map((tab) => {
         if (tab.value === "preview") {
           return (
-            <Tabs.Content value="preview" asChild={true} key={tab.value}>
+            <Tabs.Content asChild={true} key={tab.value} value="preview">
               <PreviewTab
-                key={tab.value}
                 component={component}
+                key={tab.value}
                 variant={variant}
               />
             </Tabs.Content>

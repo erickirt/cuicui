@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/cuicui/utils/cn";
 // biome-ignore lint/style/noNamespaceImport: <explanation>
 import * as TabsPrimitive from "@radix-ui/react-tabs";
 import {
@@ -7,7 +8,6 @@ import {
   type ElementRef,
   forwardRef,
 } from "react";
-import { cn } from "@/cuicui/utils/cn";
 
 const Tabs = TabsPrimitive.Root;
 
