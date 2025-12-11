@@ -1,3 +1,4 @@
+import { MenuIcon } from "lucide-react";
 import { SidemenuContent } from "#/src/app/(site)/components/sidemenu/sidemenu-content";
 import {
   Drawer,
@@ -7,16 +8,15 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "#/src/ui/shadcn/drawer";
-import { MenuIcon } from "lucide-react";
 
 export default function MobileSidemenu() {
   return (
     <Drawer>
       <DrawerTrigger asChild={true}>
         <button
-          type="button"
-          className="fixed bottom-6 right-6 z-40 flex items-center gap-2 px-6 py-3 dark:bg-neutral-300 bg-neutral-700 backdrop-blur-sm  shadow-lg rounded-full text-white dark:text-neutral-800 border border-neutral-400/10 text-lg tracking-tighter"
           aria-label="Open Menu"
+          className="fixed bottom-6 right-6 z-40 flex items-center gap-2 px-6 py-3 dark:bg-neutral-300 bg-neutral-700 backdrop-blur-sm  shadow-lg rounded-full text-white dark:text-neutral-800 border border-neutral-400/10 text-lg tracking-tighter"
+          type="button"
         >
           <MenuIcon className="size-5" />
           <span className="font-medium">Menu</span>

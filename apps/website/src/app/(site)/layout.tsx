@@ -1,8 +1,8 @@
-import { AddressBar } from "#/src/ui/address-bar";
-import StarCuicuiGithubButton from "#/src/ui/star-github-project-button";
 import { StaticNoise } from "@/cuicui/other/creative-effects/animated-noise/static-noise";
 import type { ReactNode } from "react";
 import Sidemenu from "#/src/app/(site)/components/sidemenu/sidemenu";
+import { AddressBar } from "#/src/ui/address-bar";
+import StarCuicuiGithubButton from "#/src/ui/star-github-project-button";
 
 export default function ComponentsLayout({
   children,
@@ -12,8 +12,8 @@ export default function ComponentsLayout({
       <div className="mx-auto max-w-(--breakpoint-2xl)">
         {/* Note: The noise effect is experimental and may affect the design. Consider its impact before using it officialy. */}
         <StaticNoise
-          opacity={0.05}
           className="z-9999 fixed inset-0 pointer-events-none"
+          opacity={0.05}
         />
         <Sidemenu />
         <div className="lg:ml-80">

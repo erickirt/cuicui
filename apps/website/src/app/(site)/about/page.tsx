@@ -1,5 +1,5 @@
-import { env } from "#/src/env";
 import type { Metadata } from "next";
+import { env } from "#/src/env";
 
 export const metadata: Metadata = {
   title: "About Us - CuiCui",

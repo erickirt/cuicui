@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Playground() {
   return (
     <div className="h-screen w-full">

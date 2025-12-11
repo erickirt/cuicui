@@ -7,9 +7,9 @@ await jiti.import("./src/env.ts");
 
 /** @type {import('next').NextConfig} **/
 const nextConfig = {
+  reactCompiler: true,
   experimental: {
     // serverComponentsExternalPackages: ["shiki", "vscode-oniguruma"],
-    reactCompiler: true,
   },
   transpilePackages: ["shiki", "next-mdx-remote"],
   images: {

@@ -1,5 +1,5 @@
-import type { MetadataRoute } from "next";
 import { sectionList } from "@/section-list";
+import type { MetadataRoute } from "next";
 import { env } from "#/src/env";
 
 export default function sitemap(): MetadataRoute.Sitemap {

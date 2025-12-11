@@ -1,7 +1,7 @@
-import { notFound } from "next/navigation";
-import MultipleComponentCategory from "#/src/app/(site)/[section]/[category]/multiple-component-section";
 import { sectionList } from "@/section-list";
 import type {} from "@cuicui/ui/lib/types/component";
+import { notFound } from "next/navigation";
+import MultipleComponentCategory from "#/src/app/(site)/[section]/[category]/multiple-component-section";
 import {
   newFindCategoryBySlug,
   newFindSectionBySlug,
@@ -45,6 +45,6 @@ export default async function Page({ params }: Props) {
     return notFound();
   }
   return (
-    <MultipleComponentCategory sectionSlug={section.slug} category={category} />
+    <MultipleComponentCategory category={category} sectionSlug={section.slug} />
   );
 }

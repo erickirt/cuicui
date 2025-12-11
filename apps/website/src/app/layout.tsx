@@ -3,10 +3,10 @@ import { Toaster } from "sonner";
 import "#/src/styles/globals.css";
 
 import { DM_Sans } from "next/font/google";
+import Script from "next/script";
 import type { ReactNode } from "react";
 import Providers from "#/src/app/providers";
 import { env } from "#/src/env";
-import Script from "next/script";
 import { IS_PRODUCTION } from "#/src/lib/site.const";
 const font = DM_Sans({
   subsets: ["latin"],
@@ -60,9 +60,9 @@ export default function RootLayout({
         {IS_PRODUCTION && (
           <>
             <Script
-              id="plausible-main"
-              defer={true}
               data-domain="cuicui.day"
+              defer={true}
+              id="plausible-main"
               src={`${env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN}/js/script.hash.outbound-links.js`}
             />
             <Script id="plausible-inline">

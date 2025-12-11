@@ -1,8 +1,8 @@
 import { format, formatDistanceToNow, parseISO } from "date-fns";
 
-import { compileMDX, type CompileMDXResult } from "next-mdx-remote/rsc";
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import { type CompileMDXResult, compileMDX } from "next-mdx-remote/rsc";
 
 interface Frontmatter {
   title: string;
@@ -31,11 +31,8 @@ export default async function ProjectPage() {
     } catch (error) {
       // @ts-ignore
       if (error.code === "ENOENT") {
-        console.error(`No changelog found for ${file}`);
         // Continue without throwing the error
       } else {
-        // For other errors, you might still want to handle them
-        console.error(`Error reading file ${filePath}:`, error);
         throw error; // Re-throw if it's a different kind of error
       }
     }
@@ -91,8 +88,8 @@ export default async function ProjectPage() {
         {sortedChangelogs.map(({ content, date, title }, index) => {
           return (
             <article
-              key={date.toISOString()}
               className="[&_ul]:text-neutral-600 dark:[&_ul]:text-neutral-400"
+              key={date.toISOString()}
             >
               <h5 className="m-0 inline">{format(date, "do MMMM yyyy")}</h5>
               {index === 0 && (

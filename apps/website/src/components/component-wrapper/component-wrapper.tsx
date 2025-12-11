@@ -1,10 +1,10 @@
 "use client";
-import { useLayoutEffect, useState, type ReactNode } from "react";
-import { CustomIframe } from "#/src/components/custom-iframe-component";
-import type { ComponentHeightType } from "@cuicui/ui/lib/types/component";
 import { cn } from "@/cuicui/utils/cn";
-import { getContainerHeightClass } from "#/src/components/component-wrapper/get-container-height-class";
+import type { ComponentHeightType } from "@cuicui/ui/lib/types/component";
 import { RefreshCwIcon } from "lucide-react";
+import { type ReactNode, useLayoutEffect, useState } from "react";
+import { getContainerHeightClass } from "#/src/components/component-wrapper/get-container-height-class";
+import { CustomIframe } from "#/src/components/custom-iframe-component";
 import { ScrollArea, ScrollAreaViewport } from "#/src/ui/shadcn/scrollarea";
 
 export const ComponentWrapper = ({
@@ -71,11 +71,11 @@ const RerenderButton = ({
 }) => {
   return (
     <button
-      type="button"
       className={cn(
         "absolute top-2 right-2 p-1 text-xs font-medium text-neutral-500 dark:text-neutral-500 bg-neutral-500/20 border border-neutral-400/0 hover:border-neutral-400/20 active:border-neutral-400/50 active:bg-neutral-500/40 rounded-md flex items-center gap-1 transition-colors hover:bg-neutral-500/30",
       )}
       onClick={onClick}
+      type="button"
     >
       <RefreshCwIcon className="size-3" />
       Rerender

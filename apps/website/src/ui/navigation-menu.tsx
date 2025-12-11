@@ -1,4 +1,5 @@
 "use client";
+import { cn } from "@/cuicui/utils/cn";
 import { AnimatePresence, motion } from "motion/react";
 import type React from "react";
 import {
@@ -9,7 +10,6 @@ import {
   useEffect,
 } from "react";
 import { cloneElement, isValidElement, useId, useState } from "react";
-import { cn } from "@/cuicui/utils/cn";
 
 interface NavigationMenuProps extends React.HTMLAttributes<HTMLDivElement> {
   children: ReactNode;

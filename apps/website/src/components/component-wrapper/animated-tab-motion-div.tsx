@@ -1,7 +1,7 @@
 "use client";
+import { cn } from "@/cuicui/utils/cn";
 import { type MotionProps, motion } from "motion/react";
 import type React from "react";
-import { cn } from "@/cuicui/utils/cn";
 export default function AnimatedTabMotionDiv({
   className,
   ...props

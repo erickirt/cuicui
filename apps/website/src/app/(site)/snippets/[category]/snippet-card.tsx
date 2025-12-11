@@ -1,10 +1,10 @@
 import type { Snippet } from "#/src/app/(site)/snippets/lib/snippets.type";
 import {
   Dialog,
-  DialogHeader,
-  DialogTrigger,
-  DialogTitle,
   DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
 } from "#/src/ui/shadcn/dialog";
 
 import {
@@ -29,8 +29,8 @@ export function SnippetCard(snippet: Snippet) {
           <div className="flex flex-wrap gap-2 mt-3">
             {snippet.frontmatter.tags.split(",").map((tag, index) => (
               <span
-                key={`tag-${snippet.slug}-${index}`}
                 className="text-xs font-medium text-neutral-600 dark:text-neutral-300 bg-neutral-200 dark:bg-neutral-800 rounded-full px-3 py-1"
+                key={`tag-${snippet.slug}-${index}`}
               >
                 {tag.trim()}
               </span>
@@ -60,8 +60,8 @@ export function SnippetCard(snippet: Snippet) {
             <div className="flex gap-2 ml-auto">
               {snippet.frontmatter.tags.split(",").map((tag, index) => (
                 <span
-                  key={`tag-${snippet.slug}-${index}`}
                   className="text-xs font-medium text-neutral-600 dark:text-neutral-300 bg-neutral-200 dark:bg-neutral-800 rounded-full px-3 py-1"
+                  key={`tag-${snippet.slug}-${index}`}
                 >
                   {tag.trim()}
                 </span>

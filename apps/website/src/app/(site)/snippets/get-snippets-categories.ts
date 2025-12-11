@@ -85,8 +85,7 @@ export async function getSnippetsContent({
   try {
     const content = await fs.readFile(snippetPath, "utf-8");
     return content;
-  } catch (error) {
-    console.error(`Error loading snippet: ${snippetPath}`, error);
+  } catch (_error) {
     return null;
   }
 }
