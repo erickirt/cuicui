@@ -1,6 +1,6 @@
-import { env } from "#/src/env";
-import Playground from "#/src/app/dev/playground-component/playground";
 import type { Metadata } from "next";
+import Playground from "#/src/app/dev/playground-component/playground";
+import { env } from "#/src/env";
 
 export const metadata: Metadata = {
   referrer: "no-referrer",

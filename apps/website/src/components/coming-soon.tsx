@@ -1,5 +1,5 @@
-import GradientText from "../ui/gradient-text";
 import { cn } from "@/cuicui/utils/cn";
+import GradientText from "../ui/gradient-text";
 
 export default function ComingSoonCard() {
   return (

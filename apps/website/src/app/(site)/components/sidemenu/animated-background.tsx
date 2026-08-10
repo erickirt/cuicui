@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/cuicui/utils/cn";
 import { AnimatePresence, type Transition, motion } from "motion/react";
 import {
   Children,
@@ -9,7 +10,6 @@ import {
   useId,
   useState,
 } from "react";
-import { cn } from "@/cuicui/utils/cn";
 
 export type AnimatedBackgroundProps = {
   children:

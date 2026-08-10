@@ -1,6 +1,6 @@
-import { getSnippetsCategories } from "#/src/app/(site)/snippets/get-snippets-categories";
 import { MainMenusGradientCard } from "@/cuicui/other/cursors/dynamic-cards/gradient-card";
 import Link from "next/link";
+import { getSnippetsCategories } from "#/src/app/(site)/snippets/get-snippets-categories";
 import { snippetsCategoryIcons } from "#/src/app/(site)/snippets/lib/snippets-icons";
 import MenuCategoryList from "#/src/components/main-menus/menu-category-wrapper";
 
@@ -16,8 +16,8 @@ export default async function SnippetsPage() {
 
   return (
     <MenuCategoryList
-      title="Snippets"
       description="A collection of code snippets for various programming languages and frameworks. Credits to quicksnip.dev for the initial snippets"
+      title="Snippets"
     >
       {categories.map((category) => (
         <Link href={`/snippets/${category.slug}`} key={category.slug}>

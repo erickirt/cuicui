@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/cuicui/utils/cn";
 // biome-ignore lint/style/noNamespaceImport: <explanation>
 import * as SelectPrimitive from "@radix-ui/react-select";
 import { Check, ChevronDown, ChevronUp } from "lucide-react";
@@ -8,7 +9,6 @@ import {
   type ElementRef,
   forwardRef,
 } from "react";
-import { cn } from "@/cuicui/utils/cn";
 
 const Select = SelectPrimitive.Root;
 

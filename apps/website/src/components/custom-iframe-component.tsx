@@ -4,8 +4,8 @@ import Frame from "react-frame-component";
 
 import type { ComponentHeightType } from "@cuicui/ui/lib/types/component";
 
-import { getContainerHeightClass } from "#/src/components/component-wrapper/get-container-height-class";
 import { cn } from "@/cuicui/utils/cn";
+import { getContainerHeightClass } from "#/src/components/component-wrapper/get-container-height-class";
 
 export const CustomIframe = ({
   children,

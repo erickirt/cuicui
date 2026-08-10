@@ -1,8 +1,8 @@
-import { sectionList } from "@/section-list";
-import { FloatingDock } from "#/src/components/floating-dock-navigation/floating-docks-component";
-import { ArrowUpRightIcon, GithubIcon } from "lucide-react";
 import { cn } from "@/cuicui/utils/cn";
+import { sectionList } from "@/section-list";
+import { ArrowUpRightIcon, GithubIcon } from "lucide-react";
 import Link from "next/link";
+import { FloatingDock } from "#/src/components/floating-dock-navigation/floating-docks-component";
 
 import PillToggleTheme from "@/cuicui/application-ui/theme/pill-switch-theme/default.variant";
 import { env } from "#/src/env";
@@ -27,13 +27,13 @@ export function CuicuiFloatingDock() {
       )}
     >
       <Link
-        href={env.NEXT_PUBLIC_CUICUI_GITHUB_URL}
-        title="Damien Schneider GitHub"
         className={cn(
           "group relative h-14 w-10 ml-2 overflow-hidden rounded-full bg-neutral-50 dark:bg-neutral-900 p-2 border border-neutral-500/20",
           "hover:scale-110 transform-gpu transition-transform duration-150",
         )}
+        href={env.NEXT_PUBLIC_CUICUI_GITHUB_URL}
         target="_blank"
+        title="Damien Schneider GitHub"
       >
         <GithubIcon
           className={cn(

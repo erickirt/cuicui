@@ -19,7 +19,7 @@ const snippetSection = {
   href: "/snippets",
 };
 
-const toolSection = {
+const _toolSection = {
   title: "Tools",
   Icon: <PencilRulerIcon className="size-4" />,
   href: "/tools",
@@ -42,11 +42,11 @@ export default function NewSectionSelector() {
           //TODO Add Tooltips
           return (
             <Link
-              href={section.href}
-              key={section.title}
               className={cn(
                 "flex flex-col items-center p-[3px] text-center text-neutral-600 dark:text-neutral-300 hover:bg-neutral-500/20 transition rounded-[20px] relative",
               )}
+              href={section.href}
+              key={section.title}
             >
               {isActive && (
                 <div

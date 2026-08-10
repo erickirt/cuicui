@@ -3,10 +3,10 @@ import { Toaster } from "sonner";
 import "#/src/styles/globals.css";
 
 import { DM_Sans } from "next/font/google";
+import Script from "next/script";
 import type { ReactNode } from "react";
 import Providers from "#/src/app/providers";
 import { env } from "#/src/env";
-import Script from "next/script";
 import { IS_PRODUCTION } from "#/src/lib/site.const";
 const font = DM_Sans({
   subsets: ["latin"],
@@ -58,19 +58,11 @@ export default function RootLayout({
     <html className={font.className} lang="en" suppressHydrationWarning={true}>
       <head>
         {IS_PRODUCTION && (
-          <>
-            <Script
-              id="plausible-main"
-              defer={true}
-              data-domain="cuicui.day"
-              src={`${env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN}/js/script.hash.outbound-links.js`}
-            />
-            <Script id="plausible-inline">
-              {
-                "window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }"
-              }
-            </Script>
-          </>
+          <Script
+            defer={true}
+            src="https://umami.damien-schneider.pro/script.js"
+            data-website-id="1ad3dc22-6b89-43d2-b38b-95bb1ffbc95d"
+          />
         )}
       </head>
       <Providers>

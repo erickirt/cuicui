@@ -1,9 +1,9 @@
 "use server";
-import { GlobalNavItem } from "#/src/app/(site)/components/sidemenu/navigation-item";
 import { cn } from "@/cuicui/utils/cn";
+import { NavigationSidemenuAnimatedBackground } from "#/src/app/(site)/components/sidemenu/navigation-animated-background";
+import { GlobalNavItem } from "#/src/app/(site)/components/sidemenu/navigation-item";
 import { getSidemenuItems } from "#/src/app/(site)/components/sidemenu/sidemenu-items-list";
 import Portal from "#/src/ui/portal";
-import { NavigationSidemenuAnimatedBackground } from "#/src/app/(site)/components/sidemenu/navigation-animated-background";
 
 export default async function NavigationMenu({
   section,
@@ -40,7 +40,7 @@ export default async function NavigationMenu({
         </div>
         <NavigationSidemenuAnimatedBackground>
           {sidemenuContent.items.map((item) => (
-            <li key={item.name} className="block" data-id={item.name}>
+            <li className="block" data-id={item.name} key={item.name}>
               <GlobalNavItem
                 Icon={item.Icon}
                 href={item.href}

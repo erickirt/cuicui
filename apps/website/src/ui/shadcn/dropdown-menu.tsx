@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/cuicui/utils/cn";
 // biome-ignore lint/style/noNamespaceImport: <explanation>
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
 import { Check, ChevronRight, Circle } from "lucide-react";
@@ -9,7 +10,6 @@ import {
   type HTMLAttributes,
   forwardRef,
 } from "react";
-import { cn } from "@/cuicui/utils/cn";
 
 const DropdownMenu = DropdownMenuPrimitive.Root;
 
